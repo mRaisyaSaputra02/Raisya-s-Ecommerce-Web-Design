@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limited Edition Sneakers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header staIrt -->
+    <header>
+        <div class="logo">
+            <a href="#"><img src="images/logo.svg"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="collection.html">Collections</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-menu">
+            <ul>
+                <li><a href="#"><img src="images/icon-cart.svg" class="icon-cart"></a></li>
+                <li><a href="#"><img src="images/image-avatar.png" class="image-avatar"></a></li>
+
+            </ul>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Content Start -->
+
+    <div class="product-container">
+
+        <div class="product-gallery">
+            <img onclick="()" id="main-image" src="images/image-product-1.jpg">
+            <div class="thumbnails">
+                <img onclick="()" src="images/image-product-1-thumbnail.jpg">
+                <img onclick="()" src="images/image-product-2-thumbnail.jpg">
+                <img onclick="()" src="images/image-product-3-thumbnail.jpg">
+                <img onclick="()" src="images/image-product-4-thumbnail.jpg">
+            </div>
+        </div>
+
+        <div class="lightbox" id="lightbox">
+            <span class="close-lightbox-btn">
+                <img src="images/icon-close.svg">
+            </span>
+            <img class="lightbox-main-img" id="lightbox-main-img">
+            <div class="lightbox-thumbnails" id="lightbox-thumbnails">
+                <img onclick="()" src="images/image-product-1-thumbnail.jpg">
+                <img onclick="()" src="images/image-product-2-thumbnail.jpg">
+                <img onclick="()" src="images/image-product-3-thumbnail.jpg">
+                <img onclick="()" src="images/image-product-4-thumbnail.jpg">
+            </div>
+        </div>
+
+        <div class="product-details">
+            <p class="brand">SNEAKER COMPANY</p>
+            <h1>Fall Limited Edition Sneakers</h1>
+            <p class="description">
+                These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer
+                sole, they’ll withstand everything the weather can offer.
+            </p>
+            <p class="price">
+                <span class="current-price">$125.00</span>
+                <span class="discount">50%</span>
+            </p>
+            <p class="original-price">
+                <span class="old-price">$250.00</span>
+            </p>
+            <div class="quantity-selector">
+                <button onclick="()" class="decrease-quantity"><img src="images/icon-minus.svg"></button>
+                <input type="number" id="quantity" value="1" min="1">
+                <button onclick="()" class="increase-quantity"><img src="images/icon-plus.svg"></button>
+                <button class="add-to-cart"><img src="images/icon-cart.svg">Add To Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Content End -->
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
