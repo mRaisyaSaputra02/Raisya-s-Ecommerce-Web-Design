@@ -39,25 +39,12 @@
     <div class="product-container">
 
         <div class="product-gallery">
-            <img onclick="()" id="main-image" src="images/image-product-1.jpg">
+            <img id="main-image" src="images/image-product-1.jpg">
             <div class="thumbnails">
-                <img onclick="()" src="images/image-product-1-thumbnail.jpg">
-                <img onclick="()" src="images/image-product-2-thumbnail.jpg">
-                <img onclick="()" src="images/image-product-3-thumbnail.jpg">
-                <img onclick="()" src="images/image-product-4-thumbnail.jpg">
-            </div>
-        </div>
-
-        <div class="lightbox" id="lightbox">
-            <span class="close-lightbox-btn">
-                <img src="images/icon-close.svg">
-            </span>
-            <img class="lightbox-main-img" id="lightbox-main-img">
-            <div class="lightbox-thumbnails" id="lightbox-thumbnails">
-                <img onclick="()" src="images/image-product-1-thumbnail.jpg">
-                <img onclick="()" src="images/image-product-2-thumbnail.jpg">
-                <img onclick="()" src="images/image-product-3-thumbnail.jpg">
-                <img onclick="()" src="images/image-product-4-thumbnail.jpg">
+                <img src="images/image-product-1-thumbnail.jpg">
+                <img src="images/image-product-2-thumbnail.jpg">
+                <img src="images/image-product-3-thumbnail.jpg">
+                <img src="images/image-product-4-thumbnail.jpg">
             </div>
         </div>
 
@@ -87,7 +74,29 @@
 
     <!-- Content End -->
 
-
+    <!-- Lightbox Start -->
+    <div class="lightbox-overlay">
+        <div class="lightbox">
+            <button class="close-lightbox-btn" aria-label="close lightbox" type="button">
+                <img src="images/icon-close.svg">
+            </button>
+            <button class="previous-lightbox-btn" aria-label="previous lightbox" type="button">
+                <img src="images/icon-previous.svg">
+            </button>
+            <button class="next-lightbox-btn" aria-label="next lightbox" type="button">
+                <img src="images/icon-next.svg">
+            </button>
+            <img id="lightbox-main-image" src="images/image-product-1.jpg">
+            <div class="lightbox-thumbnails">
+                <img src="images/image-product-1-thumbnail.jpg">
+                <img src="images/image-product-2-thumbnail.jpg">
+                <img src="images/image-product-3-thumbnail.jpg">
+                <img src="images/image-product-4-thumbnail.jpg">
+            </div>
+        </div>
+    </div>
+    <!-- Lightbox End -->
+    
     <script src="script.js"></script>
 </body>
 

@@ -1,0 +1,47 @@
+/* .lightbox {
+    display: none; shown via JS
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 24px;
+}
+
+.lightbox .close-lightbox-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+}
+
+.lightbox-main-img {
+    width: 600px;
+    max-width: calc(100% - 80px);
+    height: auto;
+    border-radius: 12px;
+}
+
+.lightbox-thumbnails {
+    display: flex;
+    gap: 16px;
+}
+
+.lightbox-thumbnails img {
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+    opacity: 0.6;
+    border-radius: 8px;
+    transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.lightbox-thumbnails img.active,
+.lightbox-thumbnails img:hover {
+    opacity: 1;
+    transform: translateY(-4px);
+    border: 2px solid #ff9100;
+} */
