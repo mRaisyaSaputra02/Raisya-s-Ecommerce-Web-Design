@@ -53,16 +53,34 @@ nav ul li a {
 
 }
 
+.icon-cart-badge {
+    display: none;
+    position: relative;
+    position: absolute;
+    top: 50px;
+    right: 287px;
+    width: 24px;
+    height: 16px;
+    border-radius: 40%;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #ff9100;
+    color: #ffffff;
+}
+
 .user-menu ul li a img.icon-cart {
     max-width: 30px;
     height: auto;
+    cursor: pointer;
 }
 
 .user-menu ul li a img.image-avatar {
     max-width: 65px;
     height: auto;
 }
- 
+
 
 /* Header End */
 
@@ -81,7 +99,7 @@ nav ul li a {
 }
 
 .product-gallery img {
-    max-width:600px;
+    max-width: 600px;
     height: auto;
     border-radius: 15px;
     cursor: pointer;
@@ -170,37 +188,43 @@ nav ul li a {
     color: #888888;
 }
 
-.quantity-selector {
+.quantity-selector-add-to-cart-button {
     display: flex;
     justify-content: flex-start;
 }
 
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee;
+    border-radius: 12px;
+}
+
 .decrease-quantity {
-    background: #e2e2e24b;
     border: none;
+    background-color: #eeeeee;
     padding: 20px 20px;
+    border-radius: 12px;
     cursor: pointer;
-    border-radius: 5px;
+}
+
+.quantity-selector span {
+    background-color: #eeeeee;
+    padding: 20px 20px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .increase-quantity {
-    background: #e2e2e24b;
     border: none;
+    background-color: #eeeeee;
     padding: 20px 20px;
+    border-radius: 12px;
     cursor: pointer;
-    border-radius: 5px;
 }
 
-.quantity-selector input {
-    text-align: center;
-    width: 80px;
-    font-size: large;
-    font-weight: bold;
-    border: none;
-    background: #e2e2e24b;
-}
-
-.add-to-cart {
+.add-to-cart-btn {
     display: flex;
     align-items: center;
     gap: 30px;
@@ -208,26 +232,28 @@ nav ul li a {
     padding: 20px 120px;
     background: #ff9100;
     border: none;
-    border-radius: 5px;
+    border-radius: 12px;
     color: #000000;
     cursor: pointer;
     font-size: 20px;
+    font-weight: bold;
 }
 
 /* Content End */
 
 /* Lightbox Start */
 .lightbox-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,.8);
-  display: flex; /* hide default */
-  align-items: center;
-  justify-content: center;
-  z-index: 99999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .8);
+    display: none;
+    /* hide default */
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
 }
 
 .lightbox {
@@ -260,7 +286,7 @@ nav ul li a {
 }
 
 .close-lightbox-btn img:focus {
-    outline: 3px solid rgba(255,145,0,0.15);
+    outline: 3px solid rgba(255, 145, 0, 0.15);
     outline-offset: 2px;
 }
 
@@ -289,7 +315,7 @@ nav ul li a {
 }
 
 .previous-lightbox-btn img:focus {
-    outline: 3px solid rgba(255,145,0,0.15);
+    outline: 3px solid rgba(255, 145, 0, 0.15);
     outline-offset: 2px;
 }
 
@@ -318,7 +344,7 @@ nav ul li a {
 }
 
 .next-lightbox-btn img:focus {
-    outline: 3px solid rgba(255,145,0,0.15);
+    outline: 3px solid rgba(255, 145, 0, 0.15);
     outline-offset: 2px;
 }
 
@@ -349,4 +375,140 @@ nav ul li a {
     filter: grayscale(20%) brightness(1.25);
     opacity: 0.95;
 }
+
 /* Lightbox End */
+
+/* Add To Cart Start */
+
+.add-to-cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    /* hide default */
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+.add-to-cart {
+    display: flex;
+    position: relative;
+    position: absolute;
+    top: 130px;
+    right: 130px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    box-shadow: 10px 10px 70px #000000;
+    border-radius: 15px;
+    width: auto;
+    height: auto;
+    max-width: 700px;
+    max-height: 500px;
+}
+
+.cart-title {
+    align-self: flex-start;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.cart-container-filled {
+    display: none;
+    gap: 24px;
+    padding: 0px 30px;
+}
+
+.cart-gallery {
+    display: flex;
+    justify-content: center;
+}
+
+.cart-gallery img {
+    max-width: 64px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.cart-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cart-item-name {
+    color: #3d3d3df1;
+    padding: 2px 2px;
+}
+
+.cart-price {
+    padding: 2px 2px;
+}
+
+.cart-item-price {
+    color: #3d3d3df1;
+    margin-right: 3px;
+}
+
+.cart-quantity {
+    color: #3d3d3df1;
+    margin-right: 3px;
+}
+
+.cart-total-price {
+    color: #000000;
+    font-weight: bold;
+}
+
+.cart-delete-item {
+    display: flex;
+    justify-content: center;
+}
+
+.cart-delete-item-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.cart-delete-item-btn img {
+    width: 16px;
+    height: auto;
+}
+
+.cart-checkout-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 300px;
+    height: 62px;
+    background: #ff9100;
+    border: none;
+    border-radius: 12px;
+    color: #000000;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cart-container-empty {
+    display: none;
+    padding: 50px 100px;
+    font-size: 18px;
+    color: #646464;
+}
+
+/* Add To Cart End */
+
+
+
+/* MENERIMA MASUKAN, SARAN, DAN KRITIKAN */

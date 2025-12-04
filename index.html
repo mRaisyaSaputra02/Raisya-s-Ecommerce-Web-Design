@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<!-- test woyyyy -->
+    <!-- test woyyyy -->
     <!-- Header staIrt -->
     <header>
         <div class="logo">
@@ -26,7 +26,8 @@
         </nav>
         <div class="user-menu">
             <ul>
-                <li><a href="#"><img src="images/icon-cart.svg" class="icon-cart"></a></li>
+                <span class="icon-cart-badge">0</span>
+                <li><a><img src="images/icon-cart.svg" class="icon-cart"></a></li>
                 <li><a href="#"><img src="images/image-avatar.png" class="image-avatar"></a></li>
 
             </ul>
@@ -41,10 +42,10 @@
         <div class="product-gallery">
             <img id="main-image" src="images/image-product-1.jpg">
             <div class="thumbnails">
-                <img src="images/image-product-1-thumbnail.jpg">
-                <img src="images/image-product-2-thumbnail.jpg">
-                <img src="images/image-product-3-thumbnail.jpg">
-                <img src="images/image-product-4-thumbnail.jpg">
+                <img onclick="changeImage('images/image-product-1.jpg')" src="images/image-product-1-thumbnail.jpg">
+                <img onclick="changeImage('images/image-product-2.jpg')" src="images/image-product-2-thumbnail.jpg">
+                <img onclick="changeImage('images/image-product-3.jpg')" src="images/image-product-3-thumbnail.jpg">
+                <img onclick="changeImage('images/image-product-4.jpg')" src="images/image-product-4-thumbnail.jpg">
             </div>
         </div>
 
@@ -62,12 +63,18 @@
             <p class="original-price">
                 <span class="old-price">$250.00</span>
             </p>
-            <div class="quantity-selector">
-                <button onclick="()" class="decrease-quantity"><img src="images/icon-minus.svg"></button>
-                <input type="number" id="quantity" value="1" min="1">
-                <button onclick="()" class="increase-quantity"><img src="images/icon-plus.svg"></button>
-                <button class="add-to-cart"><img src="images/icon-cart.svg">Add To Cart</button>
+            <div class="quantity-selector-add-to-cart-button">
+                <div class="quantity-selector">
+                    <button onclick="decreaseQuantity()" class="decrease-quantity"><img
+                            src="images/icon-minus.svg"></button>
+                    <span id="quantity">1</span>
+                    <button onclick="increaseQuantity()" class="increase-quantity"><img
+                            src="images/icon-plus.svg"></button>
+                </div>
+                <button onclick="addToCartBtn()" class="add-to-cart-btn"><img src="images/icon-cart.svg">Add To
+                    Cart</button>
             </div>
+
         </div>
 
     </div>
@@ -77,27 +84,62 @@
     <!-- Lightbox Start -->
     <div class="lightbox-overlay">
         <div class="lightbox">
-            <button class="close-lightbox-btn" aria-label="close lightbox" type="button">
+            <button onclick="closeLightboxBtn()" class="close-lightbox-btn" aria-label="close lightbox" type="button">
                 <img src="images/icon-close.svg">
             </button>
-            <button class="previous-lightbox-btn" aria-label="previous lightbox" type="button">
+            <button onclick="previousLightboxBtn()" class="previous-lightbox-btn" aria-label="previous lightbox" type="button">
                 <img src="images/icon-previous.svg">
             </button>
-            <button class="next-lightbox-btn" aria-label="next lightbox" type="button">
+            <button onclick="nextLightboxBtn()" class="next-lightbox-btn" aria-label="next lightbox" type="button">
                 <img src="images/icon-next.svg">
             </button>
             <img id="lightbox-main-image" src="images/image-product-1.jpg">
             <div class="lightbox-thumbnails">
-                <img src="images/image-product-1-thumbnail.jpg">
-                <img src="images/image-product-2-thumbnail.jpg">
-                <img src="images/image-product-3-thumbnail.jpg">
-                <img src="images/image-product-4-thumbnail.jpg">
+                <img onclick="lightboxChangeImage('images/image-product-1.jpg')" src="images/image-product-1-thumbnail.jpg">
+                <img onclick="lightboxChangeImage('images/image-product-2.jpg')" src="images/image-product-2-thumbnail.jpg">
+                <img onclick="lightboxChangeImage('images/image-product-3.jpg')" src="images/image-product-3-thumbnail.jpg">
+                <img onclick="lightboxChangeImage('images/image-product-4.jpg')" src="images/image-product-4-thumbnail.jpg">
             </div>
         </div>
     </div>
     <!-- Lightbox End -->
-    
+
+    <!-- Add To Cart Start -->
+
+    <div class="add-to-cart-overlay">
+        <div class="add-to-cart">
+            <h2 class="cart-title">Cart</h2>
+            <div class="cart-container-filled">
+                <div class="cart-gallery">
+                    <img id="cart-image" src="images/image-product-1-thumbnail.jpg">
+                </div>
+                <div class="cart-details">
+                    <p class="cart-item-name">Fall Limited Edition Sneakers</p>
+                    <p class="cart-price">
+                        <span class="cart-item-price">$125.00</span>
+                        <span class="cart-quantity"></span>
+                        <span class="cart-total-price"></span>
+                    </p>
+                </div>
+                <div class="cart-delete-item">
+                    <button onclick="cartDeleteItemBtn()" class="cart-delete-item-btn"><img
+                            src="images/icon-delete.svg"></button>
+                </div>
+            </div>
+            <button id="cart-checkout-btn" class="cart-checkout-btn">Checkout</button>
+            <div class="cart-container-empty">
+                <p>Your cart is empty.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add To Cart End -->
+
     <script src="script.js"></script>
 </body>
 
 </html>
+
+
+
+<!-- MENERIMA MASUKAN, SARAN, DAN KRITIKAN -->
